@@ -1,0 +1,31 @@
+extends ../layout
+
+block content
+	#container1.container(style="display:none;")
+		#page_header.page-header
+			h1 Paint in Node 
+				small Developed by  
+					a(href='http://jorgeregidor.blogspot.com')  Jorge Regidor
+		#div_canvas.col-md-8
+			canvas#canvas(width='500', height='500')
+			form(onsubmit="return false")
+				button#btn_clear Clear
+		#buttons.col-md-4
+			.panel.panel-default
+				.panel-heading Users
+				#nicknames.panel-body
+	#container2.container
+		#fondo_nickname
+			#cuadro_nickname
+				form.form-signin(id='set-nickname')
+					h2.form-signin-heading PaintNode
+					p
+					input.form-control(type='text',id='nickname' placeholder="NickName")
+					select.form-control(name='colors')
+						option(value=1) Black
+						option(value=2) Red
+						option(value=3) Blue
+						option(value=4) Green
+						option(value=5) Yellow
+						option(value=6) Pink
+					input.btn.btn-lg.btn.primary.btn-block(type='submit' value='Login')
